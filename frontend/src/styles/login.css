@@ -1,0 +1,137 @@
+.container {
+    background-color: black;
+    color: goldenrod;
+}
+
+.logintitle {
+    margin-top: 5%;
+}
+
+.logincard {
+    width: 50%;
+    height: 37vh;
+}
+
+.loginform {
+    width: 50%;
+    margin-left: 75%;
+    padding-top: 2%;
+    box-shadow: goldenrod 1px 3px 3px 1px;
+    border-radius: 5px;
+    background-color: rgba(143, 188, 143, 0.3);
+    color: goldenrod;
+    height: 35%;
+}
+
+.loginform > input {
+    margin: 10px;
+    background-color: black;
+    color: goldenrod;
+    border: none;
+    box-shadow: goldenrod 1px 1px 1px 1px;
+}
+
+.loginbtn {
+    width: 55%;
+    height: 25%;
+    border-radius: 25px;
+    transition: 2.5s;
+}
+
+.loginbtn:hover {
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+    transition: 2.5s;
+    box-shadow: black 1px 1px 1px 1px;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+    .logincard {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .loginform {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logincard {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .loginform {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    .logincard {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .loginform {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logincard {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .loginform {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+/* Custom Media Queries */
+
+/* Custom small devices (less than 320px) */
+@media (max-width: 320px) {
+    .logincard {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .loginform {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+/* Custom devices (375px) */
+@media (max-width: 375px) {
+    .logincard {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .loginform {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+/* Custom devices (425px) */
+@media (max-width: 425px) {
+    .logincard {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .loginform {
+        width: 70%;
+        margin-left: 15%;
+    }
+}

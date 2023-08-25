@@ -1,0 +1,132 @@
+.container {
+    background-color: black;
+    color: goldenrod;
+    margin-top: 25px;
+    height: 100%;
+}
+
+.category {
+    display: flex;
+    justify-content: center;
+}
+
+.catlink {
+    text-decoration: none;
+    color: goldenrod;
+    margin-right: 125px;
+}
+
+.featured {
+    margin-top: 1%;
+}
+
+.fp {
+    background-image: linear-gradient(black, darkseagreen);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    height: 20vh;
+    margin-top: 5%;
+}
+
+.fp > h1 {
+    font-size: 3.5rem;
+    padding-top: 6%;
+    text-shadow: black 1px 1px 1px;
+}
+
+.featuredcard {
+    display: inline-block;
+    margin: 25px 25px 25px 25px;
+    box-shadow: goldenrod 3px 3px 5px 1px;
+    width: 19%;
+}
+
+.featuredcard:hover {
+    box-shadow: darkseagreen 3px 3px 5px 1px;
+    transition: 1.5s;
+}
+
+.featuredimg {
+    width: 85%;
+    margin-top: 2%;
+}
+
+.postextra {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 9px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.postcreatedat {
+    color: cyan;
+}
+
+.postviews {
+    color: tomato;
+}
+
+.catname {
+    color: magenta;
+}
+
+.postexcerpt {
+    margin: 10px 0 10px 25%;
+    color: white;
+    font-size: 13px;
+    width: 50%;
+}
+
+.fp2 {
+    background-image: linear-gradient(darkseagreen, black);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    height: 20vh;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+    .featuredcard {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .featuredcard {
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .featuredcard {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .featuredcard {
+        width: 60%;
+    }
+}
+
+/* Custom Media Queries */
+
+/* Custom small devices (less than 320px) */
+@media (max-width: 320px) {
+    .featuredcard {
+        width: 90%;
+    }
+}
+
+/* Custom devices (375px) */
+@media (max-width: 375px) {
+    .featuredcard {
+        width: 80%;
+    }
+}
+
+/* Custom devices (425px) */
+@media (max-width: 425px) {
+    .featuredcard {
+        width: 70%;
+    }
+}

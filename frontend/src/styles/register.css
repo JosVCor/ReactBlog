@@ -1,0 +1,110 @@
+.regcontainer {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: goldenrod;
+    margin-top: 5%;
+}
+
+.regform {
+    width: 25%;
+    margin-left: 38%;
+    padding-top: 1.5%;
+    margin-top: 5%;
+    margin-bottom: 18%;
+    box-shadow: goldenrod 1px 3px 3px 1px;
+    border-radius: 5px;
+    background-color: rgba(143, 188, 143, 0.3);
+    color: goldenrod;
+    height: 35%;
+}
+
+.username {
+    margin-left: 12%;
+}
+
+.email {
+    margin-left: 19%;
+}
+
+.password {
+    margin-left: 13%;
+}
+
+.regform > input {
+    margin: 10px;
+    background-color: black;
+    color: goldenrod;
+    border: none;
+    box-shadow: goldenrod 1px 1px 1px 1px;
+}
+
+.regbtn {
+    width: 55%;
+    height: 25%;
+    border-radius: 25px;
+    transition: 2.5s;
+}
+
+.regbtn:hover {
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+    transition: 2.5s;
+    box-shadow: black 1px 1px 1px 1px;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+    .regform {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .regform {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    .regform {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .regform {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+/* Custom Media Queries */
+
+/* Custom small devices (less than 320px) */
+@media (max-width: 320px) {
+    .regform {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+/* Custom devices (375px) */
+@media (max-width: 375px) {
+    .regform {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+/* Custom devices (425px) */
+@media (max-width: 425px) {
+    .regform {
+        width: 70%;
+        margin-left: 15%;
+    }
+}

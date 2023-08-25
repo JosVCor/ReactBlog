@@ -1,0 +1,109 @@
+.containercat {
+    color: goldenrod;
+    margin-top: 5%;
+    display: inline-block;
+    margin-bottom: 10%;
+    height: 100vh;
+}
+
+.container > h1 {
+    margin-bottom: 5%;
+}
+
+.postcard {
+    width: 35vh;
+    height: 60vh;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: goldenrod 1px 3px 3px 1px;
+    display: inline-block;
+    margin-right: 35px;
+    margin-bottom: 35px;
+    margin-top: 3%;
+}
+
+.postcard:hover {
+    box-shadow: darkseagreen 1px 3px 3px 1px;
+}
+
+.postimg {
+    margin-top: 15px;
+    width: 90%;
+    height: 35vh;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+    .postcard {
+        width: 90%;
+        height: 45vh;
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .postcard {
+        width: 80%;
+        height: 50vh;
+        margin-right: 0;
+        margin-bottom: 25px;
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 992px) {
+    .postcard {
+        width: 70%;
+        height: 55vh;
+        margin-right: 0;
+        margin-bottom: 30px;
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .postcard {
+        width: 60%;
+        height: 60vh;
+        margin-right: 0;
+        margin-bottom: 35px;
+        margin-top: 3%;
+    }
+}
+
+/* Custom Media Queries */
+
+/* Custom small devices (less than 320px) */
+@media (max-width: 320px) {
+    .postcard {
+        width: 90%;
+        height: 45vh;
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-top: 3%;
+    }
+}
+
+/* Custom devices (375px) */
+@media (max-width: 375px) {
+    .postcard {
+        width: 80%;
+        height: 50vh;
+        margin-right: 0;
+        margin-bottom: 25px;
+        margin-top: 3%;
+    }
+}
+
+/* Custom devices (425px) */
+@media (max-width: 425px) {
+    .postcard {
+        width: 70%;
+        height: 55vh;
+        margin-right: 0;
+        margin-bottom: 30px;
+        margin-top: 3%;
+    }
+}

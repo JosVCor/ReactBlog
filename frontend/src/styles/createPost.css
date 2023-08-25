@@ -1,0 +1,249 @@
+.container {
+    height: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.formtitle {
+    margin-top: 5%;
+}
+
+.formcard {
+    margin-top: 3%;
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgba(143, 188, 143, 0.3);
+    border-radius: 10px;
+    box-shadow: darkgoldenrod 1px 1px 5px 2px;
+    padding: 20px;
+}
+
+.textcontent {
+    height: 50px;
+    display: flex;
+    margin-bottom: 55px;
+    margin-top: 35px;
+    justify-content: space-evenly;
+}
+
+.selectcontent {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 55px;
+}
+
+.inputfield {
+    width: 100%;
+    height: 40px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: darkgoldenrod 1px 1px 5px 2px;
+    outline: none;
+    font-size: 20px;
+    background-color: black;
+    color: goldenrod;
+    padding-left: 5px;
+}
+
+.inputfield:hover {
+    box-shadow: darkseagreen 1px 1px 5px 2px;
+}
+
+.formlabel {
+    font-size: 20px;
+    color: goldenrod;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formexcerpt {
+    width: 430px;
+    height: 300px;
+    background-color: black;
+    color: goldenrod;
+    box-shadow: goldenrod 1px 1px 5px 2px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.formexcerpt:hover {
+    box-shadow: darkseagreen 1px 1px 5px 2px;
+}
+
+.formimg {
+    margin-top: 25px;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: black;
+    height: 35px;
+    border-radius: 15px;
+    box-shadow: goldenrod 55px 100px 100px 50px;
+    color: goldenrod;
+    transition: 2.5s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: goldenrod;
+    color: black;
+    transition: 2.5s;
+    box-shadow: black 55px 100px 100px 50px;
+}
+
+.custom-checkbox {
+    box-shadow: black 1px 1px 5px 1px;
+    accent-color: goldenrod;
+}
+
+.custom-checkbox:hover {
+    box-shadow: darkseagreen 1px 1px 5px 1px;
+}
+
+.formcat {
+    background-color: black;
+    color: goldenrod;
+    border: none;
+    box-shadow: goldenrod 1px 1px 5px 2px;
+    border-radius: 5px;
+    height: 25px;
+    width: 150px;
+    text-align: center;
+}
+
+.formcat:hover {
+    box-shadow: darkseagreen 1px 1px 5px 2px;
+}
+
+.formcat:after {
+    border: none;
+}
+
+.formcatop {
+    border: none;
+    border-radius: 25px;
+}
+
+.formcontent {
+    background-color: black;
+    margin-bottom: 50px;
+    border-top: goldenrod 1px solid;
+    border-bottom: goldenrod 1px solid;
+}
+
+.ql-error {
+.ql-toolbar {
+    border: none;
+    background-color: black;
+    box-shadow: goldenrod 1px 3px 3px 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ql-container {
+    border: none;
+    background-color: black;
+    box-shadow: goldenrod 1px 3px 3px 1px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+}
+
+.ql-error:hover {
+.ql-toolbar {
+    border: none;
+    background-color: black;
+    box-shadow: darkseagreen 1px 3px 3px 1px;
+    transition: 1.5s;
+}
+
+.ql-container {
+    border: none;
+    background-color: black;
+    box-shadow: darkseagreen 1px 3px 3px 1px;
+    transition: 3s;
+}
+}
+
+.disabledbutton {
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.formbtn {
+    height: 35px;
+    width: 25%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: goldenrod 1px 1px 1px 1px;
+    color: goldenrod;
+    background-color: black;
+    cursor: pointer;
+    transition: 2.5s;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.formbtn:hover {
+    background-color: goldenrod;
+    box-shadow: black 1px 1px 1px 1px;
+    color: black;
+    transition: 2.5s;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+    .formcard {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .formcard {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    .formcard {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .formcard {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+/* Custom Media Queries */
+
+/* Custom small devices (less than 320px) */
+@media (max-width: 320px) {
+    .formcard {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+/* Custom devices (375px) */
+@media (max-width: 375px) {
+    .formcard {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+/* Custom devices (425px) */
+@media (max-width: 425px) {
+    .formcard {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
