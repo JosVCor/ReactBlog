@@ -114,7 +114,7 @@ export const Main = () => {
                                         </div>
                                         <h3>{post.title}</h3>
                                         <p className="postexcerpt">{post.excerpt}</p>
-                                        <button onClick={() => deletePost(post._id)}>Delete Post</button>
+                                        {/*<button onClick={() => deletePost(post._id)}>Delete Post</button>*/}
                                     </div>
                                 </Link>
 

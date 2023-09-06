@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import Cookies from "js-cookie";
 import "../../styles/login.css"
 
 export const Login = ({onLogin}) => {
@@ -19,6 +20,9 @@ export const Login = ({onLogin}) => {
             .then((response) => {
                 console.log(response.data);
                 console.log(password)
+                // Store the token as a cookie upon successful login
+                const token = response.data.token
+                Cookies.set("usertoken", token)
                 onLogin();
             })
             .catch((err) => {
