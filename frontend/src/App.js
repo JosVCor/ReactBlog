@@ -1,5 +1,5 @@
 import {Link, Route, Routes, useNavigate} from 'react-router-dom';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './App.css';
 import {CreateCategory} from "./components/categories/createCategory";
 import {CreatePost} from "./components/posts/createPost";
@@ -8,9 +8,11 @@ import {Login} from "./components/auth/login";
 import {Main} from "./components/Main";
 import {ViewCategories} from "./components/categories/viewCategories";
 import {ViewPost} from "./components/posts/ViewPost";
+import Cookies from "js-cookie";
+import {Contact} from "./components/Contact";
+import {About} from "./components/About";
 
 function App() {
-    console.log("App.js")
 
     const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false)
 
@@ -34,8 +36,28 @@ function App() {
     }
 
     const handleLogout = () => {
+        // Remove the token from the client-side cookie
+        Cookies.remove("usertoken")
+
+        // Set the login state to false
         setIsAdminLoggedIn(false)
+
+        //Redirect the user to the login page
+        navigate("/login")
     }
+
+    useEffect(() => {
+        // Check for an existing token on page load
+        const token = Cookies.get("usertoken");
+
+        if (token) {
+            // Token found, the user is logged in
+            setIsAdminLoggedIn(true);
+        } else {
+            // Token not found, the user is not logged in
+            setIsAdminLoggedIn(false);
+        }
+    }, [])
 
     return (
         <div className="App">
@@ -50,17 +72,17 @@ function App() {
                         <Link className="navlink" onClick={handleLogout} to="/">Logout</Link>
                     </>
                 }
-                <Link className="navlink" to="/register">Register</Link>
-                <Link className="navlink" to="/login">Login</Link>
             </div>
             <Routes>
                 <Route path="/" element={<Main/>}/>
                 <Route path="/createcategory" element={<CreateCategory onCreate={handleCreateCategory}/>}/>
                 <Route path="/createpost" element={<CreatePost onCreate={handleCreatePost}/>}/>
-                <Route path="/register" element={<Registration onCreate={handleRegistration}/>}/>
+                {/*<Route path="/register" element={<Registration onCreate={handleRegistration}/>}/>*/}
                 <Route path="/login" element={<Login onLogin={handleLogin}/>}/>
                 <Route path="/viewcategories/:category_id" element={<ViewCategories/>}/>
                 <Route path="/viewpost/:post_id" element={<ViewPost/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/about" element={<About/>}/>
             </Routes>
             <div className="footer">
                 <div className="footerlogo">
@@ -68,8 +90,8 @@ function App() {
                 </div>
                 <div>
                     <ul className="navlist">
-                        <li className="navlink"><Link className="navlink" to="">About</Link></li>
-                        <li className="navlink"><Link className="navlink" to="">Contact</Link></li>
+                        <li className="navlink"><Link className="navlink" to="/about">About</Link></li>
+                        <li className="navlink"><Link className="navlink" to="/contact">Contact</Link></li>
                     </ul>
                 </div>
                 <p className="mb-2 mt-t footer-text">Joseph Corrigan Blog made with React</p>

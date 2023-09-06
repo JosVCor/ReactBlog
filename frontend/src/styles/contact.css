@@ -1,0 +1,44 @@
+.contact{
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 5%;
+}
+
+.fp > .contact-title{
+    padding-top: 15%;
+}
+
+.contact-info1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+.contact-info2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 7%;
+    margin-bottom: 3%;
+}
+
+.linkedin{
+    margin-left: 10%;
+}
+
+h2{
+    margin-bottom: 5px;
+}
+
+i{
+    margin-top: 25%;
+}
+
+a{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+a:hover{
+    color: darkseagreen;
+}

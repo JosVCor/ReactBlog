@@ -44,7 +44,10 @@ export const ViewCategories = (props) => {
 
     return (
         <div className="containercat">
-            <h1>{category.name}</h1>
+            <div className="fp-categories">
+
+                <h1 className="cat-title">{category.name}</h1>
+            </div>
             {posts.filter((post) => post.category === category_id).map((post) => (
                 <div className="postcard" key={post._id}>
                     <Link to={"/viewpost/" + post._id}>
@@ -56,13 +59,14 @@ export const ViewCategories = (props) => {
                     </div>
                     <h3>{post.title}</h3>
                     <p>{post.excerpt}</p>
-                    <button onClick={() => deletePost(post._id)}>Delete Post</button>
+                    {/*<button onClick={() => deletePost(post._id)}>Delete Post</button>*/}
                     {/* Render other post details */}
                 </div>
             ))}
             {posts.filter((post) => post.category === category_id).length === 0 && (
                 <p>No posts for this category</p>
             )}
+            <div className="fp2-categories"></div>
         </div>
     )
 }
