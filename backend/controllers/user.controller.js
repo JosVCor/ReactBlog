@@ -1,7 +1,7 @@
 const express = require('express');
 const User = require("../models/user.js");
 
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 module.exports = {
@@ -14,12 +14,12 @@ module.exports = {
         }
 
         // Generate a salt and hash the password
-        bcrypt.genSalt(10, (err, salt) => {
+        bcryptjs.genSalt(10, (err, salt) => {
             if (err) {
                 return response.status(500).json({message: "Server error"});
             }
 
-            bcrypt.hash(password, salt, (err, hash) => {
+            bcryptjs.hash(password, salt, (err, hash) => {
                 if (err) {
                     return response.status(500).json({message: "Server error"});
                 }
@@ -67,7 +67,7 @@ module.exports = {
                 if (user === null) {
                     response.status(400).json({message: "Invalid login attempt"})
                 } else {
-                    bcrypt.compare(password, user.password)
+                    bcryptjs.compare(password, user.password)
                         .then(passwordIsValid => {
                             if (passwordIsValid) {
                                 response.cookie("usertoken",
