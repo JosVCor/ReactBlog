@@ -5,7 +5,7 @@ require('dotenv').config();
 const AWS = require('aws-sdk');
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Connect to MongoDB
 require("./config/mongoose.config");
