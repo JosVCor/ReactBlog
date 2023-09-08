@@ -30,6 +30,11 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Handle the root path ("/").
+app.get("/", (req, res) => {
+    res.send("Welcome to the root path!");
+});
+
 // ... Rest of your code
 require("./routes/blog_post.routes")(app);
 require("./routes/blog_categories.routes")(app);
