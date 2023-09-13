@@ -37,7 +37,7 @@ require("./routes/user.routes")(app);
 
 // Handle the root path ("/").
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.listen(PORT, () => {
