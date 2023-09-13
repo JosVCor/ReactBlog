@@ -3,7 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const AWS = require('aws-sdk');
-
+const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8000;
 
@@ -30,15 +30,15 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Handle the root path ("/").
-app.get("/", (req, res) => {
-    res.send("Welcome to the root path!");
-});
-
 // ... Rest of your code
 require("./routes/blog_post.routes")(app);
 require("./routes/blog_categories.routes")(app);
 require("./routes/user.routes")(app);
+
+// Handle the root path ("/").
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
